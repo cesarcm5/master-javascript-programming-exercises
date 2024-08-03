@@ -9,5 +9,10 @@ let obj2 = {
 
 function extend(obj1, obj2) {
     // your code here
-
+    for (let i in obj2){
+        if (!(i in obj1)){
+            obj1[i] = obj2[i]
+        }
+    }
+    return obj1
 }
